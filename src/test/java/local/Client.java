@@ -13,5 +13,6 @@ public class Client {
             intList.add(i);
         }
         Sorts.sort(SelectionSort.class, intList);
+        Sorts.sort(InsertionSort.class, intList);
     }
 }
