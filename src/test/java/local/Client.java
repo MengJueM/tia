@@ -4,6 +4,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("ALL")
 public class Client {
     public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException,
             IllegalAccessException, InstantiationException {
@@ -12,7 +13,11 @@ public class Client {
         for (int i : ints) {
             intList.add(i);
         }
-        Sorts.sort(SelectionSort.class, intList);
-        Sorts.sort(InsertionSort.class, intList);
+        List intList1 = new ArrayList<Comparable>(intList);
+        List intList2 = new ArrayList<Comparable>(intList);
+        List intList3 = new ArrayList<Comparable>(intList);
+        Sorts.sort(SelectionSort.class, intList1);
+        Sorts.sort(InsertionSort.class, intList2);
+        Sorts.sort(ShellSort.class, intList3);
     }
 }
